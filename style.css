@@ -1,0 +1,486 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* Fonts */
+body {
+    font-family: 'Prompt', sans-serif;
+}
+
+/* !General Styles */
+
+/* Quasar Gradient */
+.gradient {
+    font-weight: 600;
+    background: linear-gradient(65deg, var(--pumpkin) 0, var(--amber) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient2 {
+    font-weight: 600;
+    background: linear-gradient(75deg, var(--amber) 0, var(--pumpkin) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+img {
+    max-width: 100%;
+}
+
+:root {
+    --pumpkin: #ff6d00;
+    --amber: #fbbb00ff;
+    --black: #111111;
+}
+
+/* Scrollbars */
+::-webkit-scrollbars{
+    width:1em;
+}
+::-webkit-scrollbars-track{
+    background:linear-gradient(white,gray,50%);
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(75deg, var(--amber) 0, var(--pumpkin) 80%);
+}
+::-webkit-scrollbar-thumb:hover{
+    opacity: 0.7;
+}
+
+
+/* Nav Bar Styles */
+header {
+    background-color: #111111;
+    box-shadow: 0 10px 10px #00000052;
+    padding: 0.7em 0;
+}
+
+
+img#nav-logo {
+    width: 120px;
+    height: auto;
+}
+
+.logo {
+    display: flex;
+    align-content: space-around;
+    justify-content: center;
+}
+
+.logo-type {
+    margin: auto 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+    height: 100%;
+    gap: 30px;
+    margin: auto 0;
+    font-size: 1.2rem;
+}
+
+li {
+    list-style-type: none;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: white;
+}
+
+/* .nav-btn {
+    background-color: #ffffff;
+    padding: 0.5em 1em;
+    font-weight: 800;
+    border-radius:100px;
+    color: #136c72 !important;
+}
+.nav-btn:hover{
+    opacity:.75;
+} */
+
+.nav-item a:hover {
+    background: linear-gradient(75deg, var(--amber) 0, var(--pumpkin) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn:hover {
+    opacity: .75;
+}
+
+.fas {
+    color: white;
+    font-size: 1.7rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+/* !Media Queries */
+@media (max-width:780px) {
+
+    /* !Nav-Styles */
+    .nav-links {
+        position: fixed;
+        background-color: #000000;
+        top: 0;
+        left: 0;
+        width: 40%;
+        flex-direction: column;
+        transform: translateX(-100%);
+        transition: all 1s ease-in-out;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links.open {
+        transform: translateX(0);
+    }
+
+}
+
+
+/* 1. Hero Section Styles Here */
+
+.main-page {
+    /* background-color: #1b1b1b; */
+    background: url(images/bg_draft.png) no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    font-family: 'Orienta', sans-serif;
+    color: white;
+    padding: 3rem 0;
+}
+
+.hero-left {
+    /* background-color: #cecece; */
+    text-align: center;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    letter-spacing: 1.3px;
+    font-weight: 800;
+}
+
+.banner-info {
+    font-size: 1.2rem;
+}
+
+
+/* Clock css */
+.mytp {
+    width: 400px;
+    height: 400px;
+    border: 3px solid #f0f0f0;
+    position: relative;
+    top: 5%;
+    left: 15;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.circle {
+    color: black;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(65deg, var(--pumpkin) 0, var(--amber) 50%);
+    border-radius: 50%;
+    position: relative;
+    top: 47%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    margin: auto;
+    animation: circle 12s linear infinite;
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(0deg) translate(-200px) rotate(0deg);
+
+    }
+
+    100% {
+        transform: rotate(360deg) translate(-200px) rotate(-360deg);
+    }
+}
+
+
+section#count {
+    height: 0%;
+    position: relative;
+    top: 35%;
+}
+
+#clock {
+    display: flex;
+    font-size: 1;
+}
+
+.count-item {
+    font-weight: 800;
+}
+
+.count-item-main {
+    margin-right: 15%;
+}
+
+@media (max-width:768px) {
+    .mytp {
+        width: 300px;
+        height: 300px;
+    }
+    #clock{
+        font-size:16px;
+    }
+    .circle {
+        width: 25px;
+        height: 25px;
+    }
+
+    @keyframes circle {
+        0% {
+            transform: rotate(0deg) translate(-150px) rotate(0deg);
+
+        }
+
+        100% {
+            transform: rotate(360deg) translate(-150px) rotate(-360deg);
+        }
+    }
+
+    .count-item-main {
+        margin-right: 15%;
+    }
+}
+
+/* Clock CSS End */
+
+/* 2. About Quasar Styles */
+.about {
+    background-color: #1a1a1a;
+    padding: 1.5rem 0;
+    color: #fff;
+}
+
+.header {
+    text-align: center;
+    font-weight: 700;
+}
+
+.about-text {
+    color: white;
+    width: 90%;
+    text-align: justify;
+    font-family: 'Orienta', sans-serif;
+    margin: auto;
+    padding: 1.5rem 0 0 0;
+    font-size: 1.16rem;
+}
+
+.focus {
+    text-decoration: underline var(--pumpkin);
+}
+
+/* Quasar Info Styles */
+.about-info {
+    /* background-color: burlywood; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1.5rem 0;
+    margin: auto;
+}
+
+.info-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: rgb(73, 73, 73);
+    border-left: 8px solid var(--pumpkin);
+    border-radius: 0 6px 6px 0;
+    padding: 12px;
+}
+
+.up {
+    display: flex;
+    flex-direction: column;
+}
+
+.up>p {
+    font-family: 'Prompt', sans-serif;
+    letter-spacing: 3px;
+    font-size: 26px;
+    font-weight: 900;
+}
+
+.down {
+    font-family: 'Orienta', sans-serif;
+}
+
+.down>p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+/* 3. Prizes Styles */
+.prizes {
+    background-color: #1e1e1a;
+    padding: 1.5rem 0;
+    color: #fff;
+}
+
+.prizes-images {
+    padding: 1.5rem 0;
+}
+
+.event-item>img {
+    box-shadow: 10px 10px 21px solid var(--pumpkin);
+}
+
+
+/* 3. Sector Card Styles */
+.sectors {
+    background-color: #111111;
+    padding: 1.5rem;
+}
+
+.sector-page {
+    width: 100%;
+}
+
+.card-wrapper {
+    padding: 1.5rem 0;
+}
+
+.mycard {
+    margin-bottom: 10%;
+}
+
+.my-card-img {
+    height: 200px;
+}
+
+.card {
+    border-width: 0px;
+}
+
+.card-body {
+    background-color: #1b1b1b;
+    color: white;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px rgb(73, 73, 73);
+    transition: 0.3s all ease-in-out;
+    cursor: grab;
+}
+
+.card-body>h1,
+h3 {
+    font-family: 'Orienta', sans-serif;
+    font-weight: 500;
+}
+
+
+/* Sector Card End */
+
+
+/*! Schedule Card Styles */
+.schedule{
+    padding: 1.5rem 0;
+    background-color: black;
+}
+
+.schedule-wrapper {
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+}
+
+@media (max-width:900px) {
+    .mid {
+        margin-bottom: 5%;
+    }
+}
+
+/* Schedule Card End */
+
+
+/* Contact Us */
+.contact{
+    padding: 1.5rem 0;
+    background-color: black;
+    color: white;
+}
+.contact-page {
+    width: 80%;
+    margin: auto;
+}
+
+.sc-icon {
+    font-size: 2rem;
+    padding: 0 1rem;
+}
+
+.poc>p {
+    font-size: 16px;
+}
+
+.address>p {
+    font-size: 16px;
+}
+
+.social-links {
+    display: flex;
+    /* background-color: #cecece; */
+}
+
+
+/* Footer */
+footer {
+    height:20px;
+    background: linear-gradient(65deg, var(--pumpkin) 0, var(--amber) 50%);
+}
+
+.footer>p {
+    text-align: center;
+    font-size: 12px;
+}

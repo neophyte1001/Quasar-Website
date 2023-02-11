@@ -44,15 +44,3 @@ if (distance < 0) {
 
 
 // Clock JS End
-
-
-// shorlisting
-// video submission
-// result ann
-
-
-// phase3
-// college visit
-
-
-// phase4
